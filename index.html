@@ -27,7 +27,7 @@
       }
       .todo-container {
         max-width: 500px;
-        margin: 50px auto;
+        margin: auto;
         /* padding: 20px; */
         background-color: #ffffff;
         border-radius: 10px;
@@ -180,10 +180,10 @@
         setTimeout(()=>{
           document.getElementById("app").style.display = "block";
         document.getElementById("loader").style.display = "none"
-        },6000)
+        },3000)
       document.addEventListener("DOMContentLoaded", () => {
-        // document.getElementById("app").style.display = "block";
-        // document.getElementById("loader").style.display = "none"
+        document.getElementById("app").style.display = "block";
+        document.getElementById("loader").style.display = "none"
         setInterval(function () {
           var value = new Date();
           var hours = value.getHours();
