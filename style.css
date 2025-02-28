@@ -1,0 +1,378 @@
+/* Custom CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #6c63ff;
+  --secondary-color: #3f3d56;
+  --background: #f9f9f9;
+  --success: #4caf50;
+  --warning: #ff9800;
+  --error: #f44336;
+}
+
+#loader {
+  background: #6c63ff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bolder;
+}
+.footer {
+  text-align: center;
+}
+
+body {
+  background: #eaeff6;
+  min-height: 100vh;
+  transition: 0.2s;
+  padding: 20px;
+}
+#app {
+  display: none;
+}
+.container {
+  width: 75%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.time-greeting {
+  font-size: 2.5em;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.quote {
+  color: #666;
+  font-style: italic;
+  margin: 15px 0;
+}
+
+.app-body {
+  display: flex;
+  gap: 30px;
+}
+
+.main-content {
+  flex: 3;
+}
+
+#sidebar {
+  display: inline-block;
+  background: rgb(249, 249, 249);
+  border-radius: 15px;
+  width: 0px;
+  transition: 0.2s;
+  overflow-x: hidden;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  z-index: 100;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.task-form {
+  display: inline-block;
+  margin-inline: 10px;
+  margin-bottom: 30px;
+}
+
+.task-input {
+  flex: 1;
+  /* display:inline-block; */
+  /* width:100%; */
+  margin: 10px;
+  padding: 12px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 16px;
+
+  transition: all 0.3s ease;
+}
+
+.task-input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.light {
+  background-color: #c7d2e4;
+}
+
+.btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.task-list {
+  list-style: none;
+}
+
+.task-item {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.111);
+  animation: slideIn 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-item.completed {
+  background: #f8f9fa;
+  opacity: 0.7;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+}
+
+.task-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--error);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  animation: slideIn 0.3s ease;
+  display: none;
+}
+
+.history-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.history-item {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: white;
+  border-radius: 6px;
+  font-size: 0.9em;
+  animation: slideIn 0.3s ease;
+}
+
+.deadline-indicator {
+  font-size: 0.8em;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: var(--warning);
+  color: white;
+}
+
+.completed-time {
+  font-size: 0.8em;
+  color: var(--success);
+}
+.fade-in-out {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-in-out.visible {
+  opacity: 1;
+}
+#sidebarBtn:hover {
+  color: #282c34;
+}
+#Theme {
+  width: 100px;
+}
+
+button.cancle-sidebar {
+  transform: translate(320px, -20px) !important;
+  border-radius: 0 10px 0 10px !important;
+}
+button.cancle-sidebar:hover {
+  background-color: #f4433685;
+  color: #fff;
+}
+#themebtndark,
+#themebtnlight {
+  position: relative;
+  left: -80px;
+}
+#themebtnlight {
+  display: none;
+}
+.trash-hist {
+  position: absolute;
+  right: 20px;
+  top: 60px;
+}
+#sidebarToggler {
+  position: absolute;
+  right: 30px;
+}
+.lightText {
+  color: #eaeff6;
+}
+@media screen and (min-width: 310px) and (max-width: 424px) {
+  body {
+    background: #eaeff6;
+    min-height: 100vh;
+    transition: 0.2s;
+    padding: 0px;
+  }
+  .task-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  .btn[type="submit"] {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width: 65%;
+    display: block;
+    margin: 10px auto;
+  }
+  .task-text{
+   
+  }
+  .task-text,.deadline-indicator,.completed-time,.task-actions{
+    display:inline-block;
+    margin:5px;
+  }
+  .task-item {
+    background: white;
+    padding: 6px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    align-items: center;
+    margin: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.111);
+    animation: slideIn 0.3s ease;
+    transition: all 0.3s ease;
+    width:100%;
+  }
+  .container {
+   width: 100vw;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    backdrop-filter: blur(10px);
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  body {
+    background: #eaeff6;
+    min-height: 100vh;
+    transition: 0.2s;
+    padding: 0px;
+  }
+  .task-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  .btn[type="submit"] {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width: 65%;
+    display: block;
+    margin: 10px auto;
+  }
+  .task-text{
+   
+  }
+  .task-text,.deadline-indicator,.completed-time,.task-actions{
+    display:inline-block;
+    margin:5px;
+  }
+  .task-item {
+    background: white;
+    padding: 6px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    align-items: center;
+    margin: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.111);
+    animation: slideIn 0.3s ease;
+    transition: all 0.3s ease;
+    width:100%;
+  }
+  .container {
+   width: 100vw;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    backdrop-filter: blur(10px);
+  }
+  #sidebarToggler{
+    width:100px;
+    height:100px;
+    
+  }
+}
